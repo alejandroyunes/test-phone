@@ -1,0 +1,48 @@
+.body-wrapper {
+  padding: 0 24px;
+  max-width: 900px;
+  margin: 24px auto 0;
+
+  .body-content {
+    border-bottom: 1px solid rgb(200, 196, 196);
+    line-height: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      h3 {
+        color: rgb(79, 76, 76);
+        font-size: 18px;
+      }
+
+      h2 {
+        color: rgb(129, 127, 127);
+        font-size: 16px;
+      }
+    }
+
+    .delete-svg {
+      svg {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      svg:hover {
+        color: red;
+      }
+    }
+  }
+
+  .body-no-content {
+    border-bottom: 1px solid rgb(200, 196, 196);
+    line-height: 8px;
+
+    h3 {
+      color: rgb(129, 127, 127);
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

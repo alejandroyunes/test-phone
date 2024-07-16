@@ -1,0 +1,94 @@
+@import '../../app.scss';
+
+.modal-remove-wrapper {
+  width: 100vw;
+  position: fixed;
+  z-index: 1400;
+
+  .modal-overview {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    z-index: 1400;
+  }
+
+  .modal-container {
+    position: fixed;
+    border: 1px solid $border-light-gray;
+    border-radius: 16px;
+    text-align: center;
+    padding: 0 16px;
+    background: $main-background;
+    margin: auto;
+    max-height: calc(100vh - 110px);
+    max-width: 680px;
+    overflow-y: auto;
+    top: 10%;
+    right: 50%;
+    transform: translate(50%, 0%);
+
+    @media (max-width: $mobile) {
+      width: 80%;
+    }
+  }
+
+  .close-modal {
+    display: flex;
+    justify-content: flex-end;
+    margin: 16px 0;
+
+    svg {
+      height: 32px;
+      width: 32px;
+      fill: $main-black;
+      cursor: pointer;
+    }
+    svg:hover {
+      filter: drop-shadow(1px 1px 1px $svg-shadow);
+    }
+  }
+
+  .cancel-modal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    .cancel-buttons {
+      display: flex;
+      flex-direction: row;
+      margin: 32px 0 24px;
+    }
+
+    button {
+      padding: 10px;
+      width: 68px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      border-radius: 4px;
+    }
+
+    button:nth-child(1) {
+      border: 2px solid $sub-black;
+      background: white;
+      color: $sub-black;
+      margin-right: 1em;
+    }
+
+    button:nth-child(2) {
+      border: 2px solid #c70000;
+      background: #c70000;
+      color: white;
+    }
+  }
+}
